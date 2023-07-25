@@ -4,14 +4,14 @@
     Create Task
 {% endblock title %}
 {% block content %}
-<main>
-    <div>
-        <h1>Create Task</h1>
-        <form method="post">
-            {% csrf_token %}
-            {{ task_form.as_p }}
-            <button>Create</button>
-        </form>
-    </div>
-</main>
+    <main>
+        <div>
+            <h1>Create Task</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ task_form.as_p }}
+                <button>Create</button>
+            </form>
+        </div>
+    </main>
 {% endblock content %}

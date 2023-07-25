@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from tasks.forms import TaskForm
+from tasks.models import Task
 
 
 # Create your views here.
@@ -15,3 +16,11 @@ def create_task(request):
         "task_form": form,
     }
     return render(request, "tasks/create_task.html", context)
+
+
+def my_tasks(request):
+    tasks = Task.objects.filter(assignee=request.user)
+    context = {
+        "my_tasks": tasks,
+    }
+    return render(request, "tasks/my_tasks.html", context)

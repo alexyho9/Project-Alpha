@@ -7,7 +7,7 @@
     <main>
         <div>
             <h1>My Projects</h1>
-            {% if list_projects %}
+            {% if project_list %}
             <table>
                 <thead>
                     <tr>
@@ -15,7 +15,7 @@
                         <th>Number of tasks</th>
                     </tr>
                 </thead>
-                {% for project in list_projects.all %}
+                {% for project in project_list.all %}
 
                 <tbody>
                     <tr>
